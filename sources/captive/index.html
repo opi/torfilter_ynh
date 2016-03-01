@@ -11,39 +11,55 @@
 </head>
 <body>
     <header>
-        <h1>Tor filter</h1>
+        <h1 data-y18n="tor_filter">Tor filter</h1>
     </header>
     <main>
-        <p>
+        <p data-y18n="intro">
         You are on a restricted network that only allows Tor.
         </p>
 
         <div class="tools">
             <section class="tool tool--browser">
-                <p>
+                <p data-y18n="browser_desc">
                     Install the Tor Browser to access the web safely
                 </p>
-                <a class="tool-btn" href="https://www.torproject.org/">Tor Browser</a>
+                <a class="tool-btn" data-y18n="browser_btn" href="https://www.torproject.org/">Tor Browser</a>
             </section>
             <section class="tool tool--tails">
-                <p>
+                <p data-y18n="tails_desc">
                     Use Tails to access the Internet anonymously
                 </p>
-                <a class="tool-btn" href="https://tails.boum.org/">Tails</a>
+                <a class="tool-btn" data-y18n="tails_btn" href="https://tails.boum.org/">Tails</a>
             </section>
         </div>
         
-        <p>
+        <p data-y18n="outro">
         Tor is free software and an open network that helps you defend against traffic analysis, a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security.
         </p>
         <p>
-            <a href="https://www.torproject.org/about/overview.html.en">Learn more about Tor</a>
+            <a href="https://www.torproject.org/about/overview.html.en" data-y18n="outro_link">Learn more about Tor</a>
         </p>
+
 
     </main>
     <footer>
-        <p>"Tor" and the "Onion Logo" are registered trademarks of <a href="https://www.torproject.org/">The Tor Project, Inc</a>.</p>        
+        <p data-y18n="footer_trademarks">"Tor" and the "Onion Logo" are registered trademarks of <a href="https://www.torproject.org/">The Tor Project, Inc</a>.</p>        
     </footer>
+
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/y18n.js"></script>
+    <script type="text/javascript">
+        // User defined language
+        if (window.navigator && window.navigator.language) {
+            y18n.locale = window.navigator.language.substr(0, 2);
+            if (y18n.locale !== 'en') {
+                $.getJSON('locales/'+ y18n.locale +'.json', function(data){
+                    y18n.translations[y18n.locale] = data;
+                    y18n.translateInlineHTML();
+                });
+            }
+        }
+    </script>
 
 </body>
 </html>

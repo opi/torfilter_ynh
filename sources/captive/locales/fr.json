@@ -1,0 +1,7 @@
+{
+    "tor_filter" : "Tor filter",
+    "intro" : "Vous êtes sur un portail captif qui n'autorise que l'utilisation de Tor.",
+    "footer_trademarks" : "\"Tor\" et le \"Onion Logo\" sont des marques déposées du <a href='https://www.torproject.org/'>Tor Project, Inc</a>.",
+    "outro" : "Tor est un logiciel libre et un réseau ouvert qui permet de se défendre contre l'analyse de trafic, une forme de surveillance numérique qui menace les libertés individuelle et la vie privée, les activités commerciales et la sécurité des états.",
+    "outro_link" : "En savoir plus sur Tor"
+}
